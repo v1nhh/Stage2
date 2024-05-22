@@ -1,0 +1,35 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:51912",
+      "sslPort": 44304
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "CloudAPI": {
+      "commandName": "Project",
+      "launchUrl": "/",
+      "applicationUrl": "http://localhost:5001",
+      "environmentVariables": {
+        "ID": "local-cloud-api",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "TENANTS": "{'bra':{'connectionString': 'Server=localhost;Database=ctam;User ID=sa;Password=C@ptur3T;Application Name=Politie.CloudAPI', 'license': 'xxx'}, 'ct':{'connectionString': 'Server=localhost;Database=ctam;User ID=sa;Password=C@ptur3T;Application Name=CTAM.CloudAPI;TrustServerCertificate=Yes', 'license': 'yyy'} }",
+        "TENANT_CONNECTION_staging": "{\"ct\":\"Server=tcp:dev-ctam.database.windows.net,1433;Initial Catalog=dev-ctam-db2;Persist Security Info=False;User ID=dev-ctam;Password=ewWcwya8rkVDn3l0RR0NFiUGP663grc0OC0iwUXYdi8=;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;\",\"bra\":\"Server=tcp:dev-ctam.database.windows.net,1433;Initial Catalog=dev-ctam-db;Persist Security Info=False;User ID=dev-ctam;Password=ewWcwya8rkVDn3l0RR0NFiUGP663grc0OC0iwUXYdi8=;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;\"}",
+        "BLOB_CONNECTION": "DefaultEndpointsProtocol=https;AccountName=keyblobcloudapistaging;AccountKey=6BcvNj+iUgz5C0YNd0R0z/BD9jI8SfP5JwGOyHRi7UEJ/dRMBLafO1MHVTv+myakbUefu/X+VzUEx/OeCmEKNw==;EndpointSuffix=core.windows.net",
+        "BLOB_CONTAINER_NAME": "keys-container",
+        "BLOB_NAME": "keys.xml",
+        "KEYVAULT_KEYIDENTIFIER": "https://keyvaultcloudapistaging.vault.azure.net/keys/test/dc39bff3d0f54119a964174469175927"
+      }
+    }
+  }
+}

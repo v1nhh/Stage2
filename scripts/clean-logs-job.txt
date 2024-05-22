@@ -1,0 +1,3 @@
+# Use the 'crontab -e' command to add the line below, this will start the cronjob
+# This will make a POST request every day at 00:05
+5 0 * * * curl --location --request POST 'https://localhost/api/logs/clean'  --data-raw ''

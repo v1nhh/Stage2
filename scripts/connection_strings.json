@@ -1,0 +1,4 @@
+{
+    "ct": "Server=tcp:dev-ctam.database.windows.net,1433;Initial Catalog=dev-ctam-db2;Persist Security Info=False;User ID=dev-ctam;Password=ewWcwya8rkVDn3l0RR0NFiUGP663grc0OC0iwUXYdi8=;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+    "bra": "Server=tcp:dev-ctam.database.windows.net,1433;Initial Catalog=dev-ctam-db;Persist Security Info=False;User ID=dev-ctam;Password=ewWcwya8rkVDn3l0RR0NFiUGP663grc0OC0iwUXYdi8=;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+}

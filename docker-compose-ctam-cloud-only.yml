@@ -1,0 +1,47 @@
+version: '3.4'
+
+services:
+
+  ctamclouddb:
+    container_name: ctamclouddb
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    volumes:
+      - cloud-api-database:/var/opt/mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=C@ptur3T
+    ports:
+      - 1433:1433
+
+  ctamcloudapi:
+    container_name: ctamcloudapi
+    image: ctamcloudapi
+    environment:
+      ASPNETCORE_ENVIRONMENT: Docker
+      TENANT_CONNECTION: '{"ct": "Server=host.docker.internal;Database=ctam;User ID=sa;Password=C@ptur3T;Application Name=Politie.CloudAPI;TrustServerCertificate=True;"}'
+      UseAzureAppConfig: 'false'
+    ports:
+      - 5001:80
+    depends_on:
+      - ctamclouddb
+    # This entrypoint waits until database responds before running ctamcloudapi and uses a timeout of 15 seconds
+    entrypoint: ["./wait-for-it.sh", "ctamclouddb:1433", "-t", "30" , "--", "dotnet","CloudAPI.dll"]
+    # remove 'entrypoint' above if development is done for multi-tenants
+    # however keep in mind that the ASPNETCORE_ENVIRONMENT loads the appsettings.docker.json
+    # where connectionstring is set and used in runtime for initializing the db.
+    volumes:
+      - ./CloudAPI/ProtectionKeys:/app/ProtectionKeys
+
+  ctamcloudui:
+    container_name: ctamcloudui
+    image: ctamcloudui
+    ports:
+      - 8080:80
+
+volumes:
+  cloud-api-database: {}
+
+networks:
+  default:
+    external:
+      name: ctam_network

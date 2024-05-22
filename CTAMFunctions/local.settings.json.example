@@ -1,0 +1,17 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "ASPNETCORE_ENVIRONMENT": "Development",
+    "UseAzureAppConfig": "false",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "AzureWebJobsStorage": "Storage Emulator", // gebruik dit als de functie lokaal niet werkt
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "TENANTS": "{'ct':{'connectionString': 'Server=localhost;Database=ctam;User ID=sa;Password=C@ptur3T;Application Name=CTAM.CloudAPI;TrustServerCertificate=Yes', 'license': 'xxx'}, 'hu':{'connectionString': 'Server=DESKTOP-621LIA8\\\\SQLEXPRESS;Database=ctam;User ID=sa;Password=C@ptur3T;Application Name=Politie.CloudAPI', 'license': 'yyy'} }",
+    "SmtpHost": "localhost",
+    "SmtpPort": "25",
+    "SmtpFromAddress": "ctam@nautaconnect.com",
+    "SmtpUsername": "",
+    "SmtpPassword": "",
+    "SmtpMaxRetries": 10
+  }
+}

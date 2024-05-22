@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-CTAMCron-88F2FD3A-F486-458F-A467-1A1F520C3400</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	  <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+	<ResolvedFileToPublish Include="..\CloudAPI\appsettings.json">
+		<CopyToPublishDirectory>Never</CopyToPublishDirectory>
+	</ResolvedFileToPublish>
+	<ResolvedFileToPublish Include="..\CloudAPI\appsettings.Development.json">
+		<CopyToPublishDirectory>Never</CopyToPublishDirectory>
+	</ResolvedFileToPublish>
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CTAMFunctions\CTAMFunctions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

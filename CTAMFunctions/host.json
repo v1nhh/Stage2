@@ -1,0 +1,17 @@
+{
+    "version": "2.0",
+    "logging": {
+        "fileLoggingMode": "always",
+        "applicationInsights": {
+            "samplingSettings": {
+                "isEnabled": true,
+                "excludedTypes": "Request"
+            }
+        },
+        "logLevel": {
+            "default": "Information",
+            "Function.SendMailsFunction": "Information",
+            "Function.CleanLogsFunction": "Information"
+        }
+    }
+}

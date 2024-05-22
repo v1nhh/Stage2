@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+
+  cloud1:
+    container_name: c1
+    image: cloudapi-local
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Docker"
+      CONNECTION_STRING: "Server=database1,1433;Database=ctam;User ID=sa;Password=C@ptur3T;Application Name=Politie.CloudAPI"
+      TENANT_CONNECTION: '{"ct":"Server=tcp:dev-ctam.database.windows.net,1433;Initial Catalog=dev-ctam-db2;Persist Security Info=False;User ID=dev-ctam;Password=ewWcwya8rkVDn3l0RR0NFiUGP663grc0OC0iwUXYdi8=;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;","bra":"Server=tcp:dev-ctam.database.windows.net,1433;Initial Catalog=dev-ctam-db;Persist Security Info=False;User ID=dev-ctam;Password=ewWcwya8rkVDn3l0RR0NFiUGP663grc0OC0iwUXYdi8=;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"}'
+      ID: cloud-api1
+    ports:
+      - 9000:80
+    volumes:
+      - ./logs:/app/logs
+    restart: always
+
+  cloud2:
+    container_name: c2
+    image: cloudapi-local
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Docker"
+      CONNECTION_STRING: "Server=database2,1433;Database=ctam;User ID=sa;Password=C@ptur3T;Application Name=Politie.CloudAPI"
+      TENANT_CONNECTION: '{"ct":"Server=tcp:dev-ctam.database.windows.net,1433;Initial Catalog=dev-ctam-db2;Persist Security Info=False;User ID=dev-ctam;Password=ewWcwya8rkVDn3l0RR0NFiUGP663grc0OC0iwUXYdi8=;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;","bra":"Server=tcp:dev-ctam.database.windows.net,1433;Initial Catalog=dev-ctam-db;Persist Security Info=False;User ID=dev-ctam;Password=ewWcwya8rkVDn3l0RR0NFiUGP663grc0OC0iwUXYdi8=;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"}'
+      ID: cloud-api2
+    ports:
+      - 9001:80
+    restart: always

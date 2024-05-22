@@ -1,0 +1,134 @@
+version: '3.4'
+
+services:
+
+  ctamclouddb:
+    container_name: ctamclouddb
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    volumes:
+      - cloud-api-database:/var/opt/mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=C@ptur3T
+    ports:
+      - 1433:1433
+
+  ctamcloudapi:
+    container_name: ctamcloudapi
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamcloudapi
+    environment:
+      ASPNETCORE_ENVIRONMENT: Docker
+      TENANT_CONNECTION: '{"ct": "Server=host.docker.internal;Database=ctam;User ID=sa;Password=C@ptur3T;Application Name=Politie.CloudAPI;TrustServerCertificate=True;"}'
+      UseAzureAppConfig: 'false'
+    ports:
+      - 5001:80
+    depends_on:
+      - ctamclouddb
+    # This entrypoint waits until database responds before running ctamcloudapi and uses a timeout of 30 seconds
+    entrypoint: ["./wait-for-it.sh", "ctamclouddb:1433", "-t", "30" , "--", "dotnet","CloudAPI.dll"]
+    # remove 'entrypoint' above if development is done for multi-tenants
+    # however keep in mind that the ASPNETCORE_ENVIRONMENT loads the appsettings.docker.json
+    # where connectionstring is set and used in runtime for initializing the db.
+    volumes:
+      - ./CloudAPI/ProtectionKeys:/app/ProtectionKeys
+
+  ctamcloudui:
+    container_name: ctamcloudui
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamcloudui
+    ports:
+      - 8080:80
+
+  ctamlocaldb-one:
+    container_name: ctamlocaldb-one
+    environment:
+      ACCEPT_EULA: "Y"
+      POSTGRES_PASSWORD: docker
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    volumes:
+    - "local-api-database-one:/var/lib/postgresql/data"
+
+  ctamlocalapi-one:
+    container_name: ctamlocalapi-one
+    depends_on:
+      - ctamlocaldb-one
+    environment:
+      TENANT_ID: ct
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalapi
+    ports:
+      - "6001:80"
+    
+  ctamhardwareapi-one:
+    container_name: ctamhardwareapi-one
+    depends_on:
+      - ctamlocaldb-one
+      - ctamlocalapi-one
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamhardwareapi
+    ports:
+      - "8001:80"
+
+  ctamlocalui-one:
+    container_name: ctamlocalui-one
+    environment:
+      REST_API_URL_REPLACE : "http://localhost:6001"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalui
+    ports:
+      - 8081:80
+
+  ctamlocaldb-two:
+    container_name: ctamlocaldb-two
+    environment:
+      ACCEPT_EULA: "Y"
+      POSTGRES_PASSWORD: docker
+    image: postgres:15
+    ports:
+      - "5433:5432"
+    volumes:
+    - "local-api-database-two:/var/lib/postgresql/data"
+
+  ctamlocalapi-two:
+    container_name: ctamlocalapi-two
+    depends_on:
+      - ctamlocaldb-two
+    environment:
+      TENANT_ID: ct
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "CloudAPI:CabinetAPIKey" : "0Ab70SY6speWLaLICyiyxHZ6efIJJ"
+      "CloudAPI:APIBaseUrl" : "http://host.docker.internal:5001"
+      "CloudAPI:SignalRUrl" : "http://host.docker.internal:5001/events"
+      "HardwareAPI:APIBaseUrl" : "http://host.docker.internal:8002"
+      "ConnectionStrings:Database" : "Host=ctamlocaldb-two;Port=5432;Username=postgres;Password=docker;Database=ctam-local"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalapi
+    ports:
+      - "6002:80"
+    
+  ctamhardwareapi-two:
+    container_name: ctamhardwareapi-two
+    depends_on:
+      - ctamlocaldb-two
+      - ctamlocalapi-two
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerLocal-two
+      "LocalAPI:Url" : "http://host.docker.internal:6002/local-events"
+      "LocalAPI:CloudUrl" : "http://host.docker.internal:6002/local-events"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamhardwareapi
+    ports:
+      - "8002:80"
+
+  ctamlocalui-two:
+    container_name: ctamlocalui-two
+    environment:
+      REST_API_URL_REPLACE : "http://localhost:6002"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalui
+    ports:
+      - 8082:80
+  
+
+volumes:
+  cloud-api-database: {}
+  local-api-database-one: {}
+  local-api-database-two: {}

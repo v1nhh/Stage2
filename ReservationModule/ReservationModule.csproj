@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ApplicationCore\Commands\" />
+    <Folder Include="ApplicationCore\Utilities\" />
+    <Folder Include="ApplicationCore\Queries\" />
+    <Folder Include="ApplicationCore\Profiles\" />
+    <Folder Include="Web\Controllers\" />
+    <Folder Include="Infrastructure\InitialData\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NLog" Version="5.0.1" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CabinetModule\CabinetModule.csproj" />
+    <ProjectReference Include="..\ItemModule\ItemModule.csproj" />
+    <ProjectReference Include="..\UserRoleModule\UserRoleModule.csproj" />
+  </ItemGroup>
+
+</Project>

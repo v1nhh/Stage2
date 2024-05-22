@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ctam
+  name: ctamlocal
+  annotations:
+    image.openshift.io/triggers: >-
+      [{"from":{"kind":"ImageStreamTag","name":"ctamlocalapi:latest","namespace":"ctam"},"fieldPath":"spec.template.spec.containers[?(@.name==\"container\")].image","pause":"true"},
+      {"from":{"kind":"ImageStreamTag","name":"ctamhardwareapi:latest","namespace":"ctam"},"fieldPath":"spec.template.spec.containers[?(@.name==\"container\")].image","pause":"true"},
+      {"from":{"kind":"ImageStreamTag","name":"ctamlocalui:latest","namespace":"ctam"},"fieldPath":"spec.template.spec.containers[?(@.name==\"container\")].image","pause":"true"}]
+spec:
+  selector:
+    matchLabels:
+      app: ctamlocal
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ctamlocal
+    spec:
+      containers:
+        # - name: ctamlocaldb
+        #   image: postgres
+        #   ports:
+        #     - containerPort: 5432
+        #       protocol: TCP
+        #   env:
+        #     - name: ACCEPT_EULA
+        #       value: "Y"
+        #     - name: POSTGRES_PASSWORD
+        #       value: docker
+        #   resources: {}
+        #   volumeMounts:
+        #     - mountPath: /var/lib/postgresql
+        #       name: local-api-database
+        - name: ctamlocalapi
+          image: >-
+            ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalapi:latest
+          ports:
+            - containerPort: 6001
+              protocol: TCP
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:6001
+            - name: CloudAPI
+              value: >-
+                {       "CabinetAPIKey" : "0Ab70SY6speWLaLICyiyxHZ6efIJJ",      
+                "APIBaseUrl" : "https://api.ctam-dev.nautaconnect.cloud",      
+                "SignalRUrl" : "https://api.ctam-dev.nautaconnect.cloud/events",      
+                }
+            - name: HardwareAPI
+              value: '{APIBaseUrl: "http://localhost:8001"}'
+            - name: ASPNETCORE_ENVIRONMENT
+              value: crc
+            - name: TENANT_ID
+              value: ct
+            - name: ConnectionStrings
+              value: >-
+                {Database : "User ID=postgres;Password=docker;Host=ctamlocal-db-ctam.apps-crc.testing;Port=5432;Database=ctam-local;Pooling=true;"}
+        - name: ctamhardwareapi
+          env:            
+            - name: ASPNETCORE_URLS
+              value: http://+:8001
+            - name: ASPNETCORE_ENVIRONMENT
+              value: crc
+            - name: LocalAPI
+              value: >-
+                { CloudUrl: http://localhost:6001/local-events, Url: http://localhost:6001/local-events}
+          image: ctrdeuwctamdevcontregistry.azurecr.io/ctamhardwareapi:latest
+          ports:
+            - containerPort: 8001
+          resources: {}
+        - name: ctamlocalui
+          env:
+            - name: REST_API_URL_REPLACE
+              value: http://localhost:6001
+          image: image-registry.openshift-image-registry.svc:5000/ctam/ctamlocalui-build
+          securityContext:
+          runAsUser: 0 #Provided static uid of user root
+          serviceAccountName: "ctamdev"
+          ports:
+            - containerPort: 8080
+          resources: {}
+      imagePullSecrets:
+        - name: ctamdev
+        - name: default-dockercfg-sdtcq
+      restartPolicy: Always
+      # volumes:
+      #     - name: local-api-database
+      #       persistentVolumeClaim:
+      #         claimName: local-api-database
+  strategy:
+    type: Recreate
+  paused: false

@@ -1,0 +1,850 @@
+﻿{
+  "sq-AL": {
+    "ISO_3166_CountryCode": "sqi",
+    "ISO639_2_CountryCode": "AL",
+    "Country": "Albania",
+    "ISO639_2_Lang": "sq",
+    "Language": "Albanian",
+    "DateFormat": "yyyy-MM-dd"
+  },
+  "ar-AE": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "AE",
+    "Country": "United Arab Emirates",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "es-AR": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "AR",
+    "Country": "Argentina",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "en-AU": {
+    "ISO_3166_CountryCode": "eng",
+    "ISO639_2_CountryCode": "AU",
+    "Country": "Australia",
+    "ISO639_2_Lang": "en",
+    "Language": "English",
+    "DateFormat": "d/MM/yyyy"
+  },
+  "de-AT": {
+    "ISO_3166_CountryCode": "deu",
+    "ISO639_2_CountryCode": "AT",
+    "Country": "Austria",
+    "ISO639_2_Lang": "de",
+    "Language": "German",
+    "DateFormat": "dd.MM.yyyy"
+  },
+  "fr-BE": {
+    "ISO_3166_CountryCode": "fra",
+    "ISO639_2_CountryCode": "BE",
+    "Country": "Belgium",
+    "ISO639_2_Lang": "fr",
+    "Language": "French",
+    "DateFormat": "d/MM/yyyy"
+  },
+  "nl-BE": {
+    "ISO_3166_CountryCode": "nld",
+    "ISO639_2_CountryCode": "BE",
+    "Country": "Belgium",
+    "ISO639_2_Lang": "nl",
+    "Language": "Dutch",
+    "DateFormat": "d/MM/yyyy"
+  },
+  "bg-BG": {
+    "ISO_3166_CountryCode": "bul",
+    "ISO639_2_CountryCode": "BG",
+    "Country": "Bulgaria",
+    "ISO639_2_Lang": "bg",
+    "Language": "Bulgarian",
+    "DateFormat": "yyyy-M-d"
+  },
+  "ar-BH": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "BH",
+    "Country": "Bahrain",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "sr-BA": {
+    "ISO_3166_CountryCode": "srp",
+    "ISO639_2_CountryCode": "BA",
+    "Country": "Bosnia and Herzegovina",
+    "ISO639_2_Lang": "sr",
+    "Language": "Serbian",
+    "DateFormat": "yyyy-MM-dd"
+  },
+  "be-BY": {
+    "ISO_3166_CountryCode": "bel",
+    "ISO639_2_CountryCode": "BY",
+    "Country": "Belarus",
+    "ISO639_2_Lang": "be",
+    "Language": "Belarusian",
+    "DateFormat": "d.M.yyyy"
+  },
+  "es-BO": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "BO",
+    "Country": "Bolivia",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "dd-MM-yyyy"
+  },
+  "pt-BR": {
+    "ISO_3166_CountryCode": "por",
+    "ISO639_2_CountryCode": "BR",
+    "Country": "Brazil",
+    "ISO639_2_Lang": "pt",
+    "Language": "Portuguese",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "fr-CA": {
+    "ISO_3166_CountryCode": "fra",
+    "ISO639_2_CountryCode": "CA",
+    "Country": "Canada",
+    "ISO639_2_Lang": "fr",
+    "Language": "French",
+    "DateFormat": "yyyy-MM-dd"
+  },
+  "en-CA": {
+    "ISO_3166_CountryCode": "eng",
+    "ISO639_2_CountryCode": "CA",
+    "Country": "Canada",
+    "ISO639_2_Lang": "en",
+    "Language": "English",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "de-CH": {
+    "ISO_3166_CountryCode": "deu",
+    "ISO639_2_CountryCode": "CH",
+    "Country": "Switzerland",
+    "ISO639_2_Lang": "de",
+    "Language": "German",
+    "DateFormat": "dd.MM.yyyy"
+  },
+  "fr-CH": {
+    "ISO_3166_CountryCode": "fra",
+    "ISO639_2_CountryCode": "CH",
+    "Country": "Switzerland",
+    "ISO639_2_Lang": "fr",
+    "Language": "French",
+    "DateFormat": "dd.MM.yyyy"
+  },
+  "it-CH": {
+    "ISO_3166_CountryCode": "ita",
+    "ISO639_2_CountryCode": "CH",
+    "Country": "Switzerland",
+    "ISO639_2_Lang": "it",
+    "Language": "Italian",
+    "DateFormat": "dd.MM.yyyy"
+  },
+  "es-CL": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "CL",
+    "Country": "Chile",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "dd-MM-yyyy"
+  },
+  "zh-CN": {
+    "ISO_3166_CountryCode": "zho",
+    "ISO639_2_CountryCode": "CN",
+    "Country": "China",
+    "ISO639_2_Lang": "zh",
+    "Language": "Chinese",
+    "DateFormat": "yyyy-M-d"
+  },
+  "es-CO": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "CO",
+    "Country": "Colombia",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "d/MM/yyyy"
+  },
+  "es-CR": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "CR",
+    "Country": "Costa Rica",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "el-CY": {
+    "ISO_3166_CountryCode": "ell",
+    "ISO639_2_CountryCode": "CY",
+    "Country": "Cyprus",
+    "ISO639_2_Lang": "el",
+    "Language": "Greek",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "cs-CZ": {
+    "ISO_3166_CountryCode": "ces",
+    "ISO639_2_CountryCode": "CZ",
+    "Country": "Czech Republic",
+    "ISO639_2_Lang": "cs",
+    "Language": "Czech",
+    "DateFormat": "d.M.yyyy"
+  },
+  "de-DE": {
+    "ISO_3166_CountryCode": "deu",
+    "ISO639_2_CountryCode": "DE",
+    "Country": "Germany",
+    "ISO639_2_Lang": "de",
+    "Language": "German",
+    "DateFormat": "dd.MM.yyyy"
+  },
+  "da-DK": {
+    "ISO_3166_CountryCode": "dan",
+    "ISO639_2_CountryCode": "DK",
+    "Country": "Denmark",
+    "ISO639_2_Lang": "da",
+    "Language": "Danish",
+    "DateFormat": "dd-MM-yyyy"
+  },
+  "es-DO": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "DO",
+    "Country": "Dominican Republic",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "MM/dd/yyyy"
+  },
+  "ar-DZ": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "DZ",
+    "Country": "Algeria",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "es-EC": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "EC",
+    "Country": "Ecuador",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "ar-EG": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "EG",
+    "Country": "Egypt",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "es-ES": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "ES",
+    "Country": "Spain",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "d/MM/yyyy"
+  },
+  "ca-ES": {
+    "ISO_3166_CountryCode": "cat",
+    "ISO639_2_CountryCode": "ES",
+    "Country": "Spain",
+    "ISO639_2_Lang": "ca",
+    "Language": "Catalan",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "et-EE": {
+    "ISO_3166_CountryCode": "est",
+    "ISO639_2_CountryCode": "EE",
+    "Country": "Estonia",
+    "ISO639_2_Lang": "et",
+    "Language": "Estonian",
+    "DateFormat": "d.MM.yyyy"
+  },
+  "fi-FI": {
+    "ISO_3166_CountryCode": "fin",
+    "ISO639_2_CountryCode": "FI",
+    "Country": "Finland",
+    "ISO639_2_Lang": "fi",
+    "Language": "Finnish",
+    "DateFormat": "d.M.yyyy"
+  },
+  "fr-FR": {
+    "ISO_3166_CountryCode": "fra",
+    "ISO639_2_CountryCode": "FR",
+    "Country": "France",
+    "ISO639_2_Lang": "fr",
+    "Language": "French",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "en-GB": {
+    "ISO_3166_CountryCode": "eng",
+    "ISO639_2_CountryCode": "GB",
+    "Country": "United Kingdom",
+    "ISO639_2_Lang": "en",
+    "Language": "English",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "el-GR": {
+    "ISO_3166_CountryCode": "ell",
+    "ISO639_2_CountryCode": "GR",
+    "Country": "Greece",
+    "ISO639_2_Lang": "el",
+    "Language": "Greek",
+    "DateFormat": "d/M/yyyy"
+  },
+  "es-GT": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "GT",
+    "Country": "Guatemala",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "d/MM/yyyy"
+  },
+  "zh-HK": {
+    "ISO_3166_CountryCode": "zho",
+    "ISO639_2_CountryCode": "HK",
+    "Country": "Hong Kong",
+    "ISO639_2_Lang": "zh",
+    "Language": "Chinese",
+    "DateFormat": "yyyy年M月d日"
+  },
+  "es-HN": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "HN",
+    "Country": "Honduras",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "MM-dd-yyyy"
+  },
+  "hr-HR": {
+    "ISO_3166_CountryCode": "hrv",
+    "ISO639_2_CountryCode": "HR",
+    "Country": "Croatia",
+    "ISO639_2_Lang": "hr",
+    "Language": "Croatian",
+    "DateFormat": "dd.MM.yyyy."
+  },
+  "hu-HU": {
+    "ISO_3166_CountryCode": "hun",
+    "ISO639_2_CountryCode": "HU",
+    "Country": "Hungary",
+    "ISO639_2_Lang": "hu",
+    "Language": "Hungarian",
+    "DateFormat": "yyyy.MM.dd."
+  },
+  "in-ID": {
+    "ISO_3166_CountryCode": "ind",
+    "ISO639_2_CountryCode": "ID",
+    "Country": "Indonesia",
+    "ISO639_2_Lang": "in",
+    "Language": "Indonesian",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "hi-IN": {
+    "ISO_3166_CountryCode": "hin",
+    "ISO639_2_CountryCode": "IN",
+    "Country": "India",
+    "ISO639_2_Lang": "hi",
+    "Language": "Hindi",
+    "DateFormat": "३/६/१२"
+  },
+  "en-IN": {
+    "ISO_3166_CountryCode": "eng",
+    "ISO639_2_CountryCode": "IN",
+    "Country": "India",
+    "ISO639_2_Lang": "en",
+    "Language": "English",
+    "DateFormat": "d/M/yyyy"
+  },
+  "ga-IE": {
+    "ISO_3166_CountryCode": "gle",
+    "ISO639_2_CountryCode": "IE",
+    "Country": "Ireland",
+    "ISO639_2_Lang": "ga",
+    "Language": "Irish",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "en-IE": {
+    "ISO_3166_CountryCode": "eng",
+    "ISO639_2_CountryCode": "IE",
+    "Country": "Ireland",
+    "ISO639_2_Lang": "en",
+    "Language": "English",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "ar-IQ": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "IQ",
+    "Country": "Iraq",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "is-IS": {
+    "ISO_3166_CountryCode": "isl",
+    "ISO639_2_CountryCode": "IS",
+    "Country": "Iceland",
+    "ISO639_2_Lang": "is",
+    "Language": "Icelandic",
+    "DateFormat": "d.M.yyyy"
+  },
+  "iw-IL": {
+    "ISO_3166_CountryCode": "heb",
+    "ISO639_2_CountryCode": "IL",
+    "Country": "Israel",
+    "ISO639_2_Lang": "iw",
+    "Language": "Hebrew",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "it-IT": {
+    "ISO_3166_CountryCode": "ita",
+    "ISO639_2_CountryCode": "IT",
+    "Country": "Italy",
+    "ISO639_2_Lang": "it",
+    "Language": "Italian",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "ar-JO": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "JO",
+    "Country": "Jordan",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "ja-JP": {
+    "ISO_3166_CountryCode": "jpn",
+    "ISO639_2_CountryCode": "JP",
+    "Country": "Japan",
+    "ISO639_2_Lang": "ja",
+    "Language": "Japanese",
+    "DateFormat": "H24.MM.dd"
+  },
+  "ko-KR": {
+    "ISO_3166_CountryCode": "kor",
+    "ISO639_2_CountryCode": "KR",
+    "Country": "South Korea",
+    "ISO639_2_Lang": "ko",
+    "Language": "Korean",
+    "DateFormat": "yyyy. M. d"
+  },
+  "ar-KW": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "KW",
+    "Country": "Kuwait",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "ar-LB": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "LB",
+    "Country": "Lebanon",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "ar-LY": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "LY",
+    "Country": "Libya",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "lt-LT": {
+    "ISO_3166_CountryCode": "lit",
+    "ISO639_2_CountryCode": "LT",
+    "Country": "Lithuania",
+    "ISO639_2_Lang": "lt",
+    "Language": "Lithuanian",
+    "DateFormat": "yyyy.M.d"
+  },
+  "fr-LU": {
+    "ISO_3166_CountryCode": "fra",
+    "ISO639_2_CountryCode": "LU",
+    "Country": "Luxembourg",
+    "ISO639_2_Lang": "fr",
+    "Language": "French",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "de-LU": {
+    "ISO_3166_CountryCode": "deu",
+    "ISO639_2_CountryCode": "LU",
+    "Country": "Luxembourg",
+    "ISO639_2_Lang": "de",
+    "Language": "German",
+    "DateFormat": "dd.MM.yyyy"
+  },
+  "lv-LV": {
+    "ISO_3166_CountryCode": "lav",
+    "ISO639_2_CountryCode": "LV",
+    "Country": "Latvia",
+    "ISO639_2_Lang": "lv",
+    "Language": "Latvian",
+    "DateFormat": "yyyy.d.M"
+  },
+  "ar-MA": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "MA",
+    "Country": "Morocco",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "es-MX": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "MX",
+    "Country": "Mexico",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "d/MM/yyyy"
+  },
+  "mk-MK": {
+    "ISO_3166_CountryCode": "mkd",
+    "ISO639_2_CountryCode": "MK",
+    "Country": "Macedonia",
+    "ISO639_2_Lang": "mk",
+    "Language": "Macedonian",
+    "DateFormat": "d.M.yyyy"
+  },
+  "en-MT": {
+    "ISO_3166_CountryCode": "eng",
+    "ISO639_2_CountryCode": "MT",
+    "Country": "Malta",
+    "ISO639_2_Lang": "en",
+    "Language": "English",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "mt-MT": {
+    "ISO_3166_CountryCode": "mlt",
+    "ISO639_2_CountryCode": "MT",
+    "Country": "Malta",
+    "ISO639_2_Lang": "mt",
+    "Language": "Maltese",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "sr-ME": {
+    "ISO_3166_CountryCode": "srp",
+    "ISO639_2_CountryCode": "ME",
+    "Country": "Montenegro",
+    "ISO639_2_Lang": "sr",
+    "Language": "Serbian",
+    "DateFormat": "d.M.yyyy."
+  },
+  "ms-MY": {
+    "ISO_3166_CountryCode": "msa",
+    "ISO639_2_CountryCode": "MY",
+    "Country": "Malaysia",
+    "ISO639_2_Lang": "ms",
+    "Language": "Malay",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "es-NI": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "NI",
+    "Country": "Nicaragua",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "MM-dd-yyyy"
+  },
+  "nl-NL": {
+    "ISO_3166_CountryCode": "nld",
+    "ISO639_2_CountryCode": "NL",
+    "Country": "Netherlands",
+    "ISO639_2_Lang": "nl",
+    "Language": "Dutch",
+    "DateFormat": "d-M-yyyy"
+  },
+  "no-NO": {
+    "ISO_3166_CountryCode": "nor",
+    "ISO639_2_CountryCode": "NO",
+    "Country": "Norway",
+    "ISO639_2_Lang": "no",
+    "Language": "Norwegian",
+    "DateFormat": "dd.MM.yyyy"
+  },
+  "en-NZ": {
+    "ISO_3166_CountryCode": "eng",
+    "ISO639_2_CountryCode": "NZ",
+    "Country": "New Zealand",
+    "ISO639_2_Lang": "en",
+    "Language": "English",
+    "DateFormat": "d/MM/yyyy"
+  },
+  "ar-OM": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "OM",
+    "Country": "Oman",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "es-PA": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "PA",
+    "Country": "Panama",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "MM/dd/yyyy"
+  },
+  "es-PE": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "PE",
+    "Country": "Peru",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "en-PH": {
+    "ISO_3166_CountryCode": "eng",
+    "ISO639_2_CountryCode": "PH",
+    "Country": "Philippines",
+    "ISO639_2_Lang": "en",
+    "Language": "English",
+    "DateFormat": "M/d/yyyy"
+  },
+  "pl-PL": {
+    "ISO_3166_CountryCode": "pol",
+    "ISO639_2_CountryCode": "PL",
+    "Country": "Poland",
+    "ISO639_2_Lang": "pl",
+    "Language": "Polish",
+    "DateFormat": "dd.MM.yyyy"
+  },
+  "es-PR": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "PR",
+    "Country": "Puerto Rico",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "MM-dd-yyyy"
+  },
+  "pt-PT": {
+    "ISO_3166_CountryCode": "por",
+    "ISO639_2_CountryCode": "PT",
+    "Country": "Portugal",
+    "ISO639_2_Lang": "pt",
+    "Language": "Portuguese",
+    "DateFormat": "dd-MM-yyyy"
+  },
+  "es-PY": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "PY",
+    "Country": "Paraguay",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "ar-QA": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "QA",
+    "Country": "Qatar",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "ro-RO": {
+    "ISO_3166_CountryCode": "ron",
+    "ISO639_2_CountryCode": "RO",
+    "Country": "Romania",
+    "ISO639_2_Lang": "ro",
+    "Language": "Romanian",
+    "DateFormat": "dd.MM.yyyy"
+  },
+  "ru-RU": {
+    "ISO_3166_CountryCode": "rus",
+    "ISO639_2_CountryCode": "RU",
+    "Country": "Russia",
+    "ISO639_2_Lang": "ru",
+    "Language": "Russian",
+    "DateFormat": "dd.MM.yyyy"
+  },
+  "ar-SA": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "SA",
+    "Country": "Saudi Arabia",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "sr-CS": {
+    "ISO_3166_CountryCode": "srp",
+    "ISO639_2_CountryCode": "CS",
+    "Country": "Serbia and Montenegro",
+    "ISO639_2_Lang": "sr",
+    "Language": "Serbian",
+    "DateFormat": "d.M.yyyy."
+  },
+  "ar-SD": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "SD",
+    "Country": "Sudan",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "zh-SG": {
+    "ISO_3166_CountryCode": "zho",
+    "ISO639_2_CountryCode": "SG",
+    "Country": "Singapore",
+    "ISO639_2_Lang": "zh",
+    "Language": "Chinese",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "en-SG": {
+    "ISO_3166_CountryCode": "eng",
+    "ISO639_2_CountryCode": "SG",
+    "Country": "Singapore",
+    "ISO639_2_Lang": "en",
+    "Language": "English",
+    "DateFormat": "M/d/yyyy"
+  },
+  "es-SV": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "SV",
+    "Country": "El Salvador",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "MM-dd-yyyy"
+  },
+  "sr-RS": {
+    "ISO_3166_CountryCode": "srp",
+    "ISO639_2_CountryCode": "RS",
+    "Country": "Serbia",
+    "ISO639_2_Lang": "sr",
+    "Language": "Serbian",
+    "DateFormat": "d.M.yyyy."
+  },
+  "sk-SK": {
+    "ISO_3166_CountryCode": "slk",
+    "ISO639_2_CountryCode": "SK",
+    "Country": "Slovakia",
+    "ISO639_2_Lang": "sk",
+    "Language": "Slovak",
+    "DateFormat": "d.M.yyyy"
+  },
+  "sl-SI": {
+    "ISO_3166_CountryCode": "slv",
+    "ISO639_2_CountryCode": "SI",
+    "Country": "Slovenia",
+    "ISO639_2_Lang": "sl",
+    "Language": "Slovenian",
+    "DateFormat": "d.M.yyyy"
+  },
+  "sv-SE": {
+    "ISO_3166_CountryCode": "swe",
+    "ISO639_2_CountryCode": "SE",
+    "Country": "Sweden",
+    "ISO639_2_Lang": "sv",
+    "Language": "Swedish",
+    "DateFormat": "yyyy-MM-dd"
+  },
+  "ar-SY": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "SY",
+    "Country": "Syria",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "th-TH": {
+    "ISO_3166_CountryCode": "tha",
+    "ISO639_2_CountryCode": "TH",
+    "Country": "Thailand",
+    "ISO639_2_Lang": "th",
+    "Language": "Thai",
+    "DateFormat": "๓/๖/๒๕๕๕"
+  },
+  "ar-TN": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "TN",
+    "Country": "Tunisia",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "tr-TR": {
+    "ISO_3166_CountryCode": "tur",
+    "ISO639_2_CountryCode": "TR",
+    "Country": "Turkey",
+    "ISO639_2_Lang": "tr",
+    "Language": "Turkish",
+    "DateFormat": "dd.MM.yyyy"
+  },
+  "zh-TW": {
+    "ISO_3166_CountryCode": "zho",
+    "ISO639_2_CountryCode": "TW",
+    "Country": "Taiwan",
+    "ISO639_2_Lang": "zh",
+    "Language": "Chinese",
+    "DateFormat": "yyyy/M/d"
+  },
+  "uk-UA": {
+    "ISO_3166_CountryCode": "ukr",
+    "ISO639_2_CountryCode": "UA",
+    "Country": "Ukraine",
+    "ISO639_2_Lang": "uk",
+    "Language": "Ukrainian",
+    "DateFormat": "dd.MM.yyyy"
+  },
+  "es-UY": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "UY",
+    "Country": "Uruguay",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "en-US": {
+    "ISO_3166_CountryCode": "eng",
+    "ISO639_2_CountryCode": "US",
+    "Country": "United States",
+    "ISO639_2_Lang": "en",
+    "Language": "English",
+    "DateFormat": "M/d/yyyy"
+  },
+  "es-US": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "US",
+    "Country": "United States",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "M/d/yyyy"
+  },
+  "es-VE": {
+    "ISO_3166_CountryCode": "spa",
+    "ISO639_2_CountryCode": "VE",
+    "Country": "Venezuela",
+    "ISO639_2_Lang": "es",
+    "Language": "Spanish",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "vi-VN": {
+    "ISO_3166_CountryCode": "vie",
+    "ISO639_2_CountryCode": "VN",
+    "Country": "Vietnam",
+    "ISO639_2_Lang": "vi",
+    "Language": "Vietnamese",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "ar-YE": {
+    "ISO_3166_CountryCode": "ara",
+    "ISO639_2_CountryCode": "YE",
+    "Country": "Yemen",
+    "ISO639_2_Lang": "ar",
+    "Language": "Arabic",
+    "DateFormat": "dd/MM/yyyy"
+  },
+  "en-ZA": {
+    "ISO_3166_CountryCode": "eng",
+    "ISO639_2_CountryCode": "ZA",
+    "Country": "South Africa",
+    "ISO639_2_Lang": "en",
+    "Language": "English",
+    "DateFormat": "yyyy/MM/dd"
+  }
+}

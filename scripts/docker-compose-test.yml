@@ -1,0 +1,54 @@
+version: '3.4'
+
+services:
+
+  cloud1:
+    image: cloud-api:v2
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerCompose
+      ID: cloud-api1
+    ports:
+      - 9000:80
+    depends_on:
+      - redis
+    links:
+      - redis
+    restart: always
+
+  cloud2:
+    image: cloud-api:v2
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerCompose
+      ID: cloud-api2
+    ports:
+      - 9001:80
+    depends_on:
+      - redis
+    links:
+      - redis
+    restart: always
+
+  cloud3:
+    image: cloud-api:v2
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerCompose
+      ID: cloud-api3
+    ports:
+      - 9002:80
+    depends_on:
+      - redis
+    links:
+      - redis
+    restart: always
+
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - redis-data:/data
+    restart: always
+
+volumes:
+  cloud-api-database: {}
+  redis-data: {}

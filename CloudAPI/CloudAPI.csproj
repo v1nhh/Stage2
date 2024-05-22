@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<!-- Version parts:
+		major.minor.patch[.build][-prerelease]
+		-->
+		<Version>3.1.0</Version>
+		<GenerateDocumentationFile>False</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="ApplicationCore\Entities\" />
+		<Folder Include="ApplicationCore\Exceptions\" />
+		<Folder Include="ProtectionKeys\" />
+		<Folder Include="Migrations\" />
+		<Folder Include="ProtectionKeys\" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.DataProtection.EntityFrameworkCore" Version="6.0.7" />
+		<PackageReference Include="Microsoft.Azure.AppConfiguration.AspNetCore" Version="5.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.7">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Azure.SignalR" Version="1.18.1" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="6.0.7" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.AzureAppConfiguration" Version="5.0.0" />
+		<PackageReference Include="Azure.Extensions.AspNetCore.DataProtection.Blobs" Version="1.2.1" />
+		<PackageReference Include="Azure.Extensions.AspNetCore.DataProtection.Keys" Version="1.1.0" />
+		<PackageReference Include="Azure.Identity" Version="1.6.0" />
+		<PackageReference Include="System.Runtime" Version="4.3.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Remove="EmptyTextFile.txt" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Update="nlog.config" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\CabinetModule\CabinetModule.csproj" />
+		<ProjectReference Include="..\CommunicationModule\CommunicationModule.csproj" />
+		<ProjectReference Include="..\ItemCabinetModule\ItemCabinetModule.csproj">
+			<GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+		</ProjectReference>
+		<ProjectReference Include="..\MileageModule\MileageModule.csproj" />
+		<ProjectReference Include="..\ReservationModule\ReservationModule.csproj" />
+		<ProjectReference Include="..\UserRoleModule\UserRoleModule.csproj" />
+	</ItemGroup>
+</Project>

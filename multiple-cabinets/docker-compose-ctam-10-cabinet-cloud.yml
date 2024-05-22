@@ -1,0 +1,388 @@
+version: '3.4'
+
+services:
+
+  ctamlocaldb:
+    container_name: ctamlocaldb
+    environment:
+      ACCEPT_EULA: "Y"
+      POSTGRES_PASSWORD: docker
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    volumes:
+    - "local-api-database:/var/lib/postgresql/data"
+
+  ctamlocalapi-one:
+    container_name: ctamlocalapi-one
+    depends_on:
+      - ctamlocaldb
+    environment:
+      TENANT_ID: ct
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "CloudAPI:CabinetAPIKey" : "0Ab70SY6speWLaLICyiyxHZ6efIJJ"
+      "CloudAPI:APIBaseUrl" : "https://api.ctam-dev.nautaconnect.cloud/"
+      "CloudAPI:SignalRUrl" : "https://api.ctam-dev.nautaconnect.cloud/events"
+      "HardwareAPI:APIBaseUrl" : "http://host.docker.internal:8001"
+      "ConnectionStrings:Database" : "Host=ctamlocaldb;Port=5432;Username=postgres;Password=docker;Database=ctam-local-one"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalapi
+    ports:
+      - "6001:80"
+    
+  ctamlocalapi-two:
+    container_name: ctamlocalapi-two
+    depends_on:
+      - ctamlocaldb
+    environment:
+      TENANT_ID: ct
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "CloudAPI:CabinetAPIKey" : "0Ab70SY6speWLaLICyiyxHZ6efIJJ"
+      "CloudAPI:APIBaseUrl" : "https://api.ctam-dev.nautaconnect.cloud/"
+      "CloudAPI:SignalRUrl" : "https://api.ctam-dev.nautaconnect.cloud/events"
+      "HardwareAPI:APIBaseUrl" : "http://host.docker.internal:8002"
+      "ConnectionStrings:Database" : "Host=ctamlocaldb;Port=5432;Username=postgres;Password=docker;Database=ctam-local-two"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalapi
+    ports:
+      - "6002:80"
+    
+  ctamlocalapi-three:
+    container_name: ctamlocalapi-three
+    depends_on:
+      - ctamlocaldb
+    environment:
+      TENANT_ID: ct
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "CloudAPI:CabinetAPIKey" : "0Ab70SY6speWLaLICyiyxHZ6efIJJ"
+      "CloudAPI:APIBaseUrl" : "https://api.ctam-dev.nautaconnect.cloud/"
+      "CloudAPI:SignalRUrl" : "https://api.ctam-dev.nautaconnect.cloud/events"
+      "HardwareAPI:APIBaseUrl" : "http://host.docker.internal:8003"
+      "ConnectionStrings:Database" : "Host=ctamlocaldb;Port=5432;Username=postgres;Password=docker;Database=ctam-local-three"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalapi
+    ports:
+      - "6003:80"
+    
+  ctamlocalapi-four:
+    container_name: ctamlocalapi-four
+    depends_on:
+      - ctamlocaldb
+    environment:
+      TENANT_ID: ct
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "CloudAPI:CabinetAPIKey" : "0Ab70SY6speWLaLICyiyxHZ6efIJJ"
+      "CloudAPI:APIBaseUrl" : "https://api.ctam-dev.nautaconnect.cloud/"
+      "CloudAPI:SignalRUrl" : "https://api.ctam-dev.nautaconnect.cloud/events"
+      "HardwareAPI:APIBaseUrl" : "http://host.docker.internal:8004"
+      "ConnectionStrings:Database" : "Host=ctamlocaldb;Port=5432;Username=postgres;Password=docker;Database=ctam-local-four"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalapi
+    ports:
+      - "6004:80"
+    
+  ctamlocalapi-five:
+    container_name: ctamlocalapi-five
+    depends_on:
+      - ctamlocaldb
+    environment:
+      TENANT_ID: ct
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "CloudAPI:CabinetAPIKey" : "0Ab70SY6speWLaLICyiyxHZ6efIJJ"
+      "CloudAPI:APIBaseUrl" : "https://api.ctam-dev.nautaconnect.cloud/"
+      "CloudAPI:SignalRUrl" : "https://api.ctam-dev.nautaconnect.cloud/events"
+      "HardwareAPI:APIBaseUrl" : "http://host.docker.internal:8005"
+      "ConnectionStrings:Database" : "Host=ctamlocaldb;Port=5432;Username=postgres;Password=docker;Database=ctam-local-five"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalapi
+    ports:
+      - "6005:80"
+
+  ctamlocalapi-six:
+    container_name: ctamlocalapi-six
+    depends_on:
+      - ctamlocaldb
+    environment:
+      TENANT_ID: ct
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "CloudAPI:CabinetAPIKey" : "0Ab70SY6speWLaLICyiyxHZ6efIJJ"
+      "CloudAPI:APIBaseUrl" : "https://api.ctam-dev.nautaconnect.cloud/"
+      "CloudAPI:SignalRUrl" : "https://api.ctam-dev.nautaconnect.cloud/events"
+      "HardwareAPI:APIBaseUrl" : "http://host.docker.internal:8006"
+      "ConnectionStrings:Database" : "Host=ctamlocaldb;Port=5432;Username=postgres;Password=docker;Database=ctam-local-six"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalapi
+    ports:
+      - "6006:80"
+
+  ctamlocalapi-seven:
+    container_name: ctamlocalapi-seven
+    depends_on:
+      - ctamlocaldb
+    environment:
+      TENANT_ID: ct
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "CloudAPI:CabinetAPIKey" : "0Ab70SY6speWLaLICyiyxHZ6efIJJ"
+      "CloudAPI:APIBaseUrl" : "https://api.ctam-dev.nautaconnect.cloud/"
+      "CloudAPI:SignalRUrl" : "https://api.ctam-dev.nautaconnect.cloud/events"
+      "HardwareAPI:APIBaseUrl" : "http://host.docker.internal:8007"
+      "ConnectionStrings:Database" : "Host=ctamlocaldb;Port=5432;Username=postgres;Password=docker;Database=ctam-local-seven"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalapi
+    ports:
+      - "6007:80"
+
+  ctamlocalapi-eight:
+    container_name: ctamlocalapi-eight
+    depends_on:
+      - ctamlocaldb
+    environment:
+      TENANT_ID: ct
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "CloudAPI:CabinetAPIKey" : "0Ab70SY6speWLaLICyiyxHZ6efIJJ"
+      "CloudAPI:APIBaseUrl" : "https://api.ctam-dev.nautaconnect.cloud/"
+      "CloudAPI:SignalRUrl" : "https://api.ctam-dev.nautaconnect.cloud/events"
+      "HardwareAPI:APIBaseUrl" : "http://host.docker.internal:8008"
+      "ConnectionStrings:Database" : "Host=ctamlocaldb;Port=5432;Username=postgres;Password=docker;Database=ctam-local-eight"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalapi
+    ports:
+      - "6008:80"
+
+  ctamlocalapi-nine:
+    container_name: ctamlocalapi-nine
+    depends_on:
+      - ctamlocaldb
+    environment:
+      TENANT_ID: ct
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "CloudAPI:CabinetAPIKey" : "0Ab70SY6speWLaLICyiyxHZ6efIJJ"
+      "CloudAPI:APIBaseUrl" : "https://api.ctam-dev.nautaconnect.cloud/"
+      "CloudAPI:SignalRUrl" : "https://api.ctam-dev.nautaconnect.cloud/events"
+      "HardwareAPI:APIBaseUrl" : "http://host.docker.internal:8009"
+      "ConnectionStrings:Database" : "Host=ctamlocaldb;Port=5432;Username=postgres;Password=docker;Database=ctam-local-nine"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalapi
+    ports:
+      - "6009:80"
+
+  ctamlocalapi-ten:
+    container_name: ctamlocalapi-ten
+    depends_on:
+      - ctamlocaldb
+    environment:
+      TENANT_ID: ct
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "CloudAPI:CabinetAPIKey" : "0Ab70SY6speWLaLICyiyxHZ6efIJJ"
+      "CloudAPI:APIBaseUrl" : "https://api.ctam-dev.nautaconnect.cloud/"
+      "CloudAPI:SignalRUrl" : "https://api.ctam-dev.nautaconnect.cloud/events"
+      "HardwareAPI:APIBaseUrl" : "http://host.docker.internal:8010"
+      "ConnectionStrings:Database" : "Host=ctamlocaldb;Port=5432;Username=postgres;Password=docker;Database=ctam-local-ten"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalapi
+    ports:
+      - "6010:80" 
+
+  ctamhardwareapi-one:
+    container_name: ctamhardwareapi-one
+    depends_on:
+      - ctamlocaldb
+      - ctamlocalapi-one
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "LocalAPI:Url" : "http://host.docker.internal:6001/local-events"
+      "LocalAPI:CloudUrl" : "http://host.docker.internal:6001/local-events"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamhardwareapi
+    ports:
+      - "8001:80"
+
+  ctamhardwareapi-two:
+    container_name: ctamhardwareapi-two
+    depends_on:
+      - ctamlocaldb
+      - ctamlocalapi-two
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "LocalAPI:Url" : "http://host.docker.internal:6002/local-events"
+      "LocalAPI:CloudUrl" : "http://host.docker.internal:6002/local-events"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamhardwareapi
+    ports:
+      - "8002:80"
+
+  ctamhardwareapi-three:
+    container_name: ctamhardwareapi-three
+    depends_on:
+      - ctamlocaldb
+      - ctamlocalapi-three
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "LocalAPI:Url" : "http://host.docker.internal:6003/local-events"
+      "LocalAPI:CloudUrl" : "http://host.docker.internal:6003/local-events"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamhardwareapi
+    ports:
+      - "8003:80"
+
+  ctamhardwareapi-four:
+    container_name: ctamhardwareapi-four
+    depends_on:
+      - ctamlocaldb
+      - ctamlocalapi-four
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "LocalAPI:Url" : "http://host.docker.internal:6004/local-events"
+      "LocalAPI:CloudUrl" : "http://host.docker.internal:6004/local-events"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamhardwareapi
+    ports:
+      - "8004:80"
+
+  ctamhardwareapi-five:
+    container_name: ctamhardwareapi-five
+    depends_on:
+      - ctamlocaldb
+      - ctamlocalapi-five
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "LocalAPI:Url" : "http://host.docker.internal:6005/local-events"
+      "LocalAPI:CloudUrl" : "http://host.docker.internal:6005/local-events"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamhardwareapi
+    ports:
+      - "8005:80"
+
+  ctamhardwareapi-six:
+    container_name: ctamhardwareapi-six
+    depends_on:
+      - ctamlocaldb
+      - ctamlocalapi-six
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "LocalAPI:Url" : "http://host.docker.internal:6006/local-events"
+      "LocalAPI:CloudUrl" : "http://host.docker.internal:6006/local-events"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamhardwareapi
+    ports:
+      - "8006:80"
+
+  ctamhardwareapi-seven:
+    container_name: ctamhardwareapi-seven
+    depends_on:
+      - ctamlocaldb
+      - ctamlocalapi-seven
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "LocalAPI:Url" : "http://host.docker.internal:6007/local-events"
+      "LocalAPI:CloudUrl" : "http://host.docker.internal:6007/local-events"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamhardwareapi
+    ports:
+      - "8007:80"
+
+  ctamhardwareapi-eight:
+    container_name: ctamhardwareapi-eight
+    depends_on:
+      - ctamlocaldb
+      - ctamlocalapi-eight
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "LocalAPI:Url" : "http://host.docker.internal:6008/local-events"
+      "LocalAPI:CloudUrl" : "http://host.docker.internal:6008/local-events"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamhardwareapi
+    ports:
+      - "8008:80"
+
+  ctamhardwareapi-nine:
+    container_name: ctamhardwareapi-nine
+    depends_on:
+      - ctamlocaldb
+      - ctamlocalapi-nine
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "LocalAPI:Url" : "http://host.docker.internal:6009/local-events"
+      "LocalAPI:CloudUrl" : "http://host.docker.internal:6009/local-events"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamhardwareapi
+    ports:
+      - "8009:80"
+
+  ctamhardwareapi-ten:
+    container_name: ctamhardwareapi-ten
+    depends_on:
+      - ctamlocaldb
+      - ctamlocalapi-ten
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerLocal
+      "LocalAPI:Url" : "http://host.docker.internal:6010/local-events"
+      "LocalAPI:CloudUrl" : "http://host.docker.internal:6010/local-events"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamhardwareapi
+    ports:
+      - "8010:80"
+
+  ctamlocalui-one:
+    container_name: ctamlocalui-one
+    environment:
+      REST_API_URL_REPLACE : "http://localhost:6001"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalui
+    ports:
+      - 8081:80
+
+  ctamlocalui-two:
+    container_name: ctamlocalui-two
+    environment:
+      REST_API_URL_REPLACE : "http://localhost:6002"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalui
+    ports:
+      - 8082:80
+  
+  ctamlocalui-three:
+    container_name: ctamlocalui-three
+    environment:
+      REST_API_URL_REPLACE : "http://localhost:6003"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalui
+    ports:
+      - 8083:80
+
+  ctamlocalui-four:
+    container_name: ctamlocalui-four
+    environment:
+      REST_API_URL_REPLACE : "http://localhost:6004"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalui
+    ports:
+      - 8084:80
+
+  ctamlocalui-five:
+    container_name: ctamlocalui-five
+    environment:
+      REST_API_URL_REPLACE : "http://localhost:6005"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalui
+    ports:
+      - 8085:80
+
+  ctamlocalui-six:
+    container_name: ctamlocalui-six
+    environment:
+      REST_API_URL_REPLACE : "http://localhost:6006"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalui
+    ports:
+      - 8086:80
+
+  ctamlocalui-seven:
+    container_name: ctamlocalui-seven
+    environment:
+      REST_API_URL_REPLACE : "http://localhost:6007"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalui
+    ports:
+      - 8087:80
+
+  ctamlocalui-eight:
+    container_name: ctamlocalui-eight
+    environment:
+      REST_API_URL_REPLACE : "http://localhost:6008"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalui
+    ports:
+      - 8088:80
+
+  ctamlocalui-nine:
+    container_name: ctamlocalui-nine
+    environment:
+      REST_API_URL_REPLACE : "http://localhost:6009"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalui
+    ports:
+      - 8089:80
+
+  ctamlocalui-ten:
+    container_name: ctamlocalui-ten
+    environment:
+      REST_API_URL_REPLACE : "http://localhost:6010"
+    image: ctrdeuwctamdevcontregistry.azurecr.io/ctamlocalui
+    ports:
+      - 8090:80
+
+volumes:
+  cloud-api-database: {}
+  local-api-database: {}

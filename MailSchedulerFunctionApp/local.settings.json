@@ -1,0 +1,15 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "ASPNETCORE_ENVIRONMENT": "Development",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "TENANT_CONNECTION": "{'bra':'Server=DESKTOP-1JPHME8;Database=ctam;User ID=sa;Password=C@ptur3T;Application Name=CTAM.CloudAPI', 'hu':'Server=DESKTOP-621LIA8\\\\SQLEXPRESS;Database=ctam;User ID=ctamadmin;Password=C@ptur3T;Application Name=Politie.CloudAPI'}",
+    "SmtpHost": "localhost",
+    "SmtpPort": "25",
+    "SmtpFromAddress": "ctam_noreply@nautaconnect.com",
+    "SmtpUsername": "",
+    "SmtpPassword": "",
+    "SmtpMaxRetries": 10
+  }
+}

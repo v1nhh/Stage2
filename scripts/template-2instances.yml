@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+
+  cloud1:
+    container_name: c1
+    image: cloudapi-local
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Docker"
+      CONNECTION_STRING: "Server=database1,1433;Database=ctam;User ID=sa;Password=C@ptur3T;Application Name=Politie.CloudAPI"
+      TENANT_CONNECTION: <tenant_connection>
+      ID: cloud-api1
+    ports:
+      - 9000:80
+    volumes:
+      - ./logs:/app/logs
+    restart: always
+
+  cloud2:
+    container_name: c2
+    image: cloudapi-local
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Docker"
+      CONNECTION_STRING: "Server=database2,1433;Database=ctam;User ID=sa;Password=C@ptur3T;Application Name=Politie.CloudAPI"
+      TENANT_CONNECTION: <tenant_connection>
+      ID: cloud-api2
+    ports:
+      - 9001:80
+    restart: always

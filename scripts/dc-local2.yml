@@ -1,0 +1,60 @@
+version: '3.4'
+
+services:
+
+  cloud1:
+    container_name: c1
+    image: cloudapi-local
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Docker"
+      CONNECTION_STRING: "Server=database1,1433;Database=ctam;User ID=sa;Password=C@ptur3T;Application Name=Politie.CloudAPI"
+      TENANT_CONNECTION: <tenant_connection>
+      ID: cloud-api1
+    ports:
+      - 9000:80
+    depends_on:
+      - database1
+      - database2
+    volumes:
+      - ./logs:/app/logs
+    restart: always
+
+  cloud2:
+    container_name: c2
+    image: cloudapi-local
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Docker"
+      CONNECTION_STRING: "Server=database2,1433;Database=ctam;User ID=sa;Password=C@ptur3T;Application Name=Politie.CloudAPI"
+      TENANT_CONNECTION: <tenant_connection>
+      ID: cloud-api2
+    ports:
+      - 9001:80
+    depends_on:
+      - database1
+      - database2
+    restart: always
+
+  database1:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 1433:1433
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "C@ptur3T"
+    volumes:
+      - ctam-docker-database1:/var/opt/mssql
+
+  database2:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 1434:1433
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "C@ptur3T"
+    volumes:
+      - ctam-docker-database2:/var/opt/mssql
+
+
+volumes:
+  ctam-docker-database1: {}
+  ctam-docker-database2: {}
